@@ -46,7 +46,7 @@ namespace Nmkoder.OS
 
         public static Process SetStartInfo(Process proc, bool hidden, string filename = "cmd.exe")
         {
-            proc.StartInfo.UseShellExecute = !hidden;
+            proc.StartInfo.UseShellExecute = false;
             proc.StartInfo.RedirectStandardOutput = hidden;
             proc.StartInfo.RedirectStandardError = hidden;
             proc.StartInfo.CreateNoWindow = hidden;
